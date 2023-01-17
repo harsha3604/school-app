@@ -10,15 +10,17 @@ class StudentSignUpForm(UserCreationForm):
 
     class Meta(UserCreationForm.Meta):
         model = User
-        
-
 
     @transaction.atomic
     def save(self):
-        user = super().save(commit=False)   
+        user = super().save(commit=False)
         user.is_student = True
         user.save()
-        student = Student.objects.create(user=user)
+        student = Student.objects.create(
+            user=user,
+            name=self.cleaned_data.get('name'),
+            age=self.cleaned_data.get('age'),
+            )
         student.save()
         return user
 
@@ -27,7 +29,8 @@ class StudentSignUpForm(UserCreationForm):
 class TeacherSignUpForm(UserCreationForm):
     name=forms.CharField(required=True)
     age=forms.IntegerField(required=True)
-  
+    t_subject = forms.CharField(label = 'Select Subject:', widget = forms.Select(choices=SUBJECT_CHOICES))
+
     class Meta(UserCreationForm.Meta):
         model = User
  
@@ -37,7 +40,12 @@ class TeacherSignUpForm(UserCreationForm):
         user = super().save(commit=False)
         user.is_teacher = True
         user.save()
-        teacher = Teacher.objects.create(user=user)
+        teacher = Teacher.objects.create(
+            user=user,
+            name=self.cleaned_data.get('name'),
+            age=self.cleaned_data.get('age'),
+            t_subject=self.cleaned_data.get('t_subject'),
+            )
         teacher.save()
         return user
 

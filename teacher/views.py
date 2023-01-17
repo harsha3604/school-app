@@ -33,6 +33,7 @@ class TeacherCreateView(LoginRequiredMixin,CreateView):
             instance.user=Teacher.objects.get(user=self.request.user)
         except Teacher.DoesNotExist:
             instance.user=None
+            
         instance.save()
         return HttpResponseRedirect('/teacher')
     
