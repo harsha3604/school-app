@@ -1,0 +1,25 @@
+<html>
+
+<title>Welcome</title>
+
+<body>
+    <p>Hello {{user.username}}. Welcome to the app.</p>
+    <p>This is teacher page.</p>
+    <br><br>
+    <a href="{% url 'teacher.create'%}">Create Question</a>
+
+    <ul>
+        {% for a in questions %}
+        <li class="question-li">{{a.question}}</li>
+        <a href="{% url 'teacher.detail' pk=a.id %}">View Question</a>
+        <a href="{% url 'teacher.update' pk=a.id %}">Update Question</a>
+        <a href="{% url 'teacher.delete' pk=a.id %}">Delete Question</a>
+        <br><br>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'logout'%}">Logout</a>
+
+
+</body>
+
+</html>

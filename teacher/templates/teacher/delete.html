@@ -1,0 +1,15 @@
+<html>
+<title>Delete</title>
+
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <p>Are you sure you want to delete the question?</p>
+        <input type="submit" value="Confirm" />
+    </form>
+
+    <br>
+    <a href="{% url 'teacher' %}">Back</a>
+</body>
+
+</html>
