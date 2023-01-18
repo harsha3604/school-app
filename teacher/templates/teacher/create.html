@@ -1,23 +1,14 @@
-<html>
+{% extends 'base.html' %}
+{% block content%}
+<form method="POST" enctype="multipart/form-data">
 
-<head>
-    <title>
-        Create
-    </title>
-</head>
+    <!-- Security token -->
+    {% csrf_token %}
 
-<body>
-    <form method="POST" enctype="multipart/form-data">
+    <!-- Using the formset -->
+    {{ form.as_p }}
 
-        <!-- Security token -->
-        {% csrf_token %}
-
-        <!-- Using the formset -->
-        {{ form.as_p }}
-
-        <input type="submit" value="Submit">
-    </form>
-    <a href="{% url 'teacher' %}">Back</a>
-</body>
-
-</html>
+    <input type="submit" value="Submit">
+</form>
+<a href="{% url 'teacher' %}">Back</a>
+{% endblock %}

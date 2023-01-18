@@ -1,14 +1,9 @@
-<html>
-
-<title>Quiz Result</title>
-
-<body>
-    <p class="card-text">Correct answers: {{right}}</p>
-    <p class="card-text">Incorrect answers: {{wrong}}</p>
-    <p class="card-text">Total questions: {{total}}</p>
-    <p class="card-text">Score: {{score}}</p>
-    <h5>All the best for next quiz!</h5>
-</body>
+{% extends 'base.html' %}
+{% block content%}
+<p class="card-text">Correct answers: {{right}}</p>
+<p class="card-text">Incorrect answers: {{wrong}}</p>
+<p class="card-text">Total questions: {{total}}</p>
+<p class="card-text">Score: {{score}}</p>
+<h5>All the best for next quiz!</h5>
 <button><a href="{% url 'student' %}">Go back</a></button>
-
-</html>
+{% endblock %}

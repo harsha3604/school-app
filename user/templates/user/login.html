@@ -1,20 +1,12 @@
-<html>
+{% extends 'base.html' %}
+{% block content%}
 
-<head>
-    <title>
-        Login
-    </title>
-</head>
-
-<body>
-    <form method="post">
-        {% csrf_token%}
-        {{form.as_p}}
-        <input type="submit" />
-    </form>
-    <br><br>
-    <button><a href="{% url 'index'%}">Signup</a></button>
-    <br><br>
-</body>
-
-</html>
+<form method="post">
+    {% csrf_token%}
+    {{form.as_p}}
+    <input type="submit" />
+</form>
+<br><br>
+<button><a href="{% url 'index'%}">Back to Main</a></button>
+<br><br>
+{% endblock %}

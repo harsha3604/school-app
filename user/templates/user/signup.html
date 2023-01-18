@@ -1,19 +1,10 @@
-<html>
-
-<head>
-    <title>
-        Registration
-    </title>
-</head>
-
-<body>
-    <form method="POST" accept-charset="utf-8">
-        {% csrf_token %}
-        {{form.as_p}}
-        <input type="Submit" name="submit" value="Signup">
-    </form>
-</body>
+{% extends 'base.html' %}
+{% block content%}
+<form method="POST" accept-charset="utf-8">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="Submit" name="submit" value="Signup">
+</form>
 <br><br>
 <button><a href="{% url 'index' %}">Back</a></button>
-
-</html>
+{% endblock%}

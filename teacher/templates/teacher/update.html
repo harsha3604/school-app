@@ -1,14 +1,10 @@
-<html>
-<title>Update</title>
-
-<body>
-    <form action="{% url 'teacher.update' pk=question.id %}" method="post">
-        {% csrf_token %}
-        {{form.as_p}}
-        <button type="submit">Submit</button>
-    </form>
-    <br>
-    <a href="{% url 'teacher' %}">Back</a>
-</body>
-
-</html>
+{% extends 'base.html' %}
+{% block content%}
+<form action="{% url 'teacher.update' pk=question.id %}" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">Submit</button>
+</form>
+<br>
+<a href="{% url 'teacher' %}">Back</a>
+{% endblock %}
