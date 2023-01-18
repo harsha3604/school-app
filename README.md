@@ -7,3 +7,10 @@
     - python3 manage.py runserver
 
 Suggestions are welcome.
+
+
+## Update 1.1
+* Students can take any one of the 4 subject quizzes: English, Science, Maths and Geography.
+* Teacher assigned to a subject can perform CRUD operations on questions related to that subject only.
+  - For example: A science teacher can only view questions related to science subject.
+ 

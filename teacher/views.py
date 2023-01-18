@@ -12,12 +12,27 @@ class TeacherHomeView(LoginRequiredMixin,ListView):
     template_name='teacher/teacher.html'
     login_url='/login'
 
+
+    # this below code is for "per user"
+
+    # def get_queryset(self):
+    #     try:
+    #         u=Teacher.objects.get(user=self.request.user)
+    #     except Teacher.DoesNotExist:
+    #         u=None
+    #     return Question.objects.filter(user_id=u)
+
+
+    #this code is for "per subject"
+    # refernce: https://stackoverflow.com/questions/64039737/object-is-not-subscriptable-using-django-and-python
     def get_queryset(self):
         try:
             u=Teacher.objects.get(user=self.request.user)
+            subject=u.t_subject
         except Teacher.DoesNotExist:
             u=None
-        return Question.objects.filter(user_id=u)
+            subject=u.t_subject
+        return Question.objects.filter(q_subject=subject)
 
 
 
@@ -33,9 +48,10 @@ class TeacherCreateView(LoginRequiredMixin,CreateView):
             instance.user=Teacher.objects.get(user=self.request.user)
         except Teacher.DoesNotExist:
             instance.user=None
-            
         instance.save()
         return HttpResponseRedirect('/teacher')
+
+    
     
 
 class TeacherReadView(LoginRequiredMixin,DetailView):
