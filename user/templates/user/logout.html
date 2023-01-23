@@ -2,7 +2,7 @@
 {% block content%}
 <p>Bye {{user.username}}. You are logged out.</p>
 
-<a href="{% url 'login'%}">Login</a>
+<button class="button"><a href="{% url 'login'%}">Login</a></button>
 <br><br>
-<a href="{% url 'index'%}">Signup Page</a>
+<button class="button"><a href="{% url 'index'%}">Signup Page</a></button>
 {% endblock %}

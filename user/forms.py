@@ -11,6 +11,14 @@ class StudentSignUpForm(UserCreationForm):
     class Meta(UserCreationForm.Meta):
         model = User
 
+    #remove help text from signup form 
+    def __init__(self, *args, **kwargs):
+        super(StudentSignUpForm, self).__init__(*args, **kwargs)
+
+        for fieldname in ['username', 'password1', 'password2']:
+            self.fields[fieldname].help_text = None
+
+
     @transaction.atomic
     def save(self):
         user = super().save(commit=False)
@@ -33,7 +41,12 @@ class TeacherSignUpForm(UserCreationForm):
 
     class Meta(UserCreationForm.Meta):
         model = User
- 
+
+    def __init__(self, *args, **kwargs):
+        super(TeacherSignUpForm, self).__init__(*args, **kwargs)
+
+        for fieldname in ['username', 'password1', 'password2']:
+            self.fields[fieldname].help_text = None
  
     @transaction.atomic
     def save(self):

@@ -3,18 +3,18 @@
 <p>Hello {{user.username}}. Welcome to the app.</p>
 <p>This is teacher page.</p>
 <br><br>
-<a href="{% url 'teacher.create'%}">Create Question</a>
-
+<button class=button><a href="{% url 'teacher.create'%}">Create Question</a></button>
+<br><br><br><br>
 <ul>
         {% for a in questions %}
         <li class="question-li">{{a.question}}</li>
-        <a href="{% url 'teacher.detail' pk=a.id %}">View Question</a>
-        <a href="{% url 'teacher.update' pk=a.id %}">Update Question</a>
-        <a href="{% url 'teacher.delete' pk=a.id %}">Delete Question</a>
+        <button class=button><a href="{% url 'teacher.detail' pk=a.id %}">View Question</a></button>
+        <button class=button><a href="{% url 'teacher.update' pk=a.id %}">Update Question</a></button>
+        <button class=button><a href="{% url 'teacher.delete' pk=a.id %}">Delete Question</a></button>
         <br><br><br><br>
         {% endfor %}
 </ul>
-<a href="{% url 'logout'%}">Logout</a>
+<button class=button><a href="{% url 'logout'%}">Logout</a></button>
 
 
 {% endblock %}
