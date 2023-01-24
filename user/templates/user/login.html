@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 {% block content%}
 
-<form method="post" class="x">
+<form method="post">
     {% csrf_token%}
     {{form.as_p}}
     <input type="submit" />
 </form>
 <br><br>
-<button class="button"><a href="{% url 'index'%}">Back to Main</a></button>
+<button><a href="{% url 'index'%}">Back to Main</a></button>
 <br><br>
 {% endblock %}
