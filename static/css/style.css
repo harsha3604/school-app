@@ -1,3 +1,75 @@
 body {
-    background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
 }
+
+/* ----------------------------------------------------------- LOGIN PAGE -------------------------------------------------- */
+.form {
+    width: 320px;
+    height: 480px;
+    background: #fff;
+    box-shadow: 0 10px 15px rgba(179, 179, 179, 0.7);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 1rem;
+}
+
+.text p {
+    font-size: .8rem;
+    padding-top: 0.3rem;
+    color: #0A66C3;
+}
+
+.text h1 {
+    color: #0A66C3;
+}
+
+.forgot-password-link {
+    width: 140px;
+    padding: .2rem;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bolder;
+    color: #0A66C3;
+    transition: .3s;
+    border-radius: 12px;
+}
+
+.forgot-password-link:hover {
+    background: rgba(10, 102, 195, 0.3);
+}
+
+.join-link {
+    text-decoration: none;
+    font-weight: bolder;
+    color: #0A66C3;
+}
+
+.join-now {
+    text-decoration: none;
+    font-weight: bolder;
+    color: #0A66C3;
+    border-radius: 12px;
+    transition: .3s;
+    font-weight: bolder;
+    padding: .2rem;
+}
+
+.join-now:hover {
+    background: rgba(10, 102, 195, 0.3);
+}
+
+.tapp {
+    color: #0A66C3;
+}
+
+/* ----------------------------------------------------------- LOGIN PAGE -------------------------------------------------- */
