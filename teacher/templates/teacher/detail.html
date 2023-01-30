@@ -1,7 +1,17 @@
 {% extends 'base.html' %}
 {% block content%}
-<p>Question Subject: {{questions.q_subject}}</p>
-<p>Question: {{questions.question}}</p>
-<p>Answer: {{questions.answer}}</p>
-<button><a href="{% url 'teacher' %}">Back</a></button>
+<table class="teacher-detail-table">
+    <tr>
+        <th>Question</th>
+        <th>Answer</th>
+        <th>Subject</th>
+    </tr>
+    <tr>
+        <td>{{questions.question}}</td>
+        <td>{{questions.answer}}</td>
+        <td>{{questions.q_subject}}</td>
+    </tr>
+</table>
+<br><br>
+<a class="teacher-button" href="{% url 'teacher' %}">Back</a>
 {% endblock %}

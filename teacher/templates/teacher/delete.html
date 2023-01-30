@@ -1,11 +1,14 @@
 {% extends 'base.html' %}
 {% block content%}
-<form method="post">
-    {% csrf_token %}
-    <p>Are you sure you want to delete the question?</p>
-    <input type="submit" value="Confirm" />
-</form>
+<div class="teacher-delete">
+    <form method="post">
+        {% csrf_token %}
+        <p>Are you sure you want to delete this question?</p>
+        <p>Once deleted, cannot be recovered back.</p>
+        <input type="submit" value="Confirm" />
+    </form>
 
-<br>
-<button><a href="{% url 'teacher' %}">Back</a></button>
+    <br>
+    <a class="teacher-button" href="{% url 'teacher' %}">Back</a>
+</div>
 {% endblock %}

@@ -134,6 +134,8 @@ body {
 
 /* ----------------------------------------------------------- LOGIN PAGE -------------------------------------------------- */
 
+
+
 /* ----------------------------------------------------------- SIGNUP PAGE ------------------------------------------------- */
 .signup-box {
     width: 480px;
@@ -198,12 +200,15 @@ body {
 }
 
 .signup-text p {
-    transform: translate(-25%, 1500%);
-    font-size: x-large;
+    transform: translate(200%, 1750%);
+    width: 10%;
+    font-size: larger;
     font-family: 'Open Sans', sans-serif;
 }
 
 /* ----------------------------------------------------------- SIGNUP PAGE ------------------------------------------------- */
+
+
 
 /* ----------------------------------------------------------- LOGOUT PAGE ------------------------------------------------- */
 
@@ -231,3 +236,185 @@ body {
 }
 
 /* ----------------------------------------------------------- LOGOUT PAGE ------------------------------------------------- */
+
+
+
+/* ----------------------------------------------------------- TEACHER PAGE ------------------------------------------------- */
+
+/*----------------------------------------------------TEACHER HOME*/
+.teacher-p {
+    text-align: right;
+    font-family: 'Open Sans', sans-serif;
+    font-size: x-large;
+}
+
+.teacher-main-table {
+    border-collapse: collapse;
+    margin: auto;
+    font-family: 'Open Sans', sans-serif;
+    font-size-adjust: initial;
+}
+
+.teacher-main-table td,
+th {
+    padding: 1rem;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.teacher-main-table tr {
+    background: #eee;
+}
+
+.teacher-button {
+    display: block;
+    width: 150px;
+    height: 20px;
+    background: #3f0a0a;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    line-height: 22px;
+    text-decoration: none;
+    font-size: small;
+    font-family: 'Open Sans', sans-serif;
+    margin: auto;
+}
+
+
+.teacher-list-button {
+    display: block;
+    width: 100px;
+    height: 20px;
+    background: #3f0a0a;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    line-height: 22px;
+    text-decoration: none;
+    font-size: small;
+    font-family: 'Open Sans', sans-serif;
+    margin: auto;
+}
+
+/*-----------------------------------------------------TEACHER DETAIL*/
+.teacher-detail-table {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Open Sans', sans-serif;
+    font-size: larger;
+
+}
+
+/*------------------------------------------------------TEACHER UPDATE*/
+.teacher-update {
+    position: absolute;
+    transform: translate(250%, 50%);
+
+}
+
+.teacher-update input[type=submit] {
+    display: block;
+    width: 100px;
+    height: 40px;
+    background: #3f0a0a;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    line-height: 5px;
+    text-decoration: none;
+    font-size: small;
+    font-family: 'Open Sans', sans-serif;
+    margin: auto;
+    cursor: pointer;
+}
+
+.teacher-button-update {
+    transform: translate(0%, 1600%);
+    display: block;
+    width: 100px;
+    height: 20px;
+    background: #3f0a0a;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    line-height: 20px;
+    text-decoration: none;
+    font-size: small;
+    font-family: 'Open Sans', sans-serif;
+    margin: auto;
+    cursor: pointer;
+}
+
+/*----------------------------------------------------TEACHER DELETE*/
+.teacher-delete {
+    transform: translate(0%, 125%);
+}
+
+.teacher-delete input[type=submit] {
+    display: block;
+    width: 100px;
+    height: 40px;
+    background: #3f0a0a;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    line-height: 5px;
+    text-decoration: none;
+    font-size: small;
+    font-family: 'Open Sans', sans-serif;
+    margin: auto;
+    cursor: pointer;
+}
+
+.teacher-delete p {
+    font-size: x-large;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*----------------------------------------------------TEACHER CREATE*/
+.teacher-create {
+    position: absolute;
+    transform: translate(250%, 50%);
+}
+
+.teacher-create input[type=submit] {
+    display: block;
+    width: 100px;
+    height: 40px;
+    background: #3f0a0a;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    line-height: 5px;
+    text-decoration: none;
+    font-size: small;
+    font-family: 'Open Sans', sans-serif;
+    margin: auto;
+    cursor: pointer;
+}
+
+/* ----------------------------------------------------------- TEACHER PAGE ------------------------------------------------- */
+
+
+
+/* ----------------------------------------------------------- STUDENT PAGE ------------------------------------------------- */
+
+
+
+
+
+/* ----------------------------------------------------------- STUDENT PAGE ------------------------------------------------- */

@@ -1,10 +1,9 @@
 {% extends 'base.html' %}
 {% block content%}
-<form action="{% url 'teacher.update' pk=question.id %}" method="post">
+<form class="teacher-update" action="{% url 'teacher.update' pk=question.id %}" method="post">
     {% csrf_token %}
     {{form.as_p}}
-    <button type="submit">Submit</button>
+    <input type="submit" value="Submit" />
 </form>
-<br>
-<button><a href="{% url 'teacher' %}">Back</a></button>
+<a class="teacher-button-update" href="{% url 'teacher' %}">Back</a>
 {% endblock %}

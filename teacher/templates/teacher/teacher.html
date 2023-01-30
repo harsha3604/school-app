@@ -1,20 +1,28 @@
 {% extends 'base.html' %}
 {% block content%}
-<p>Hello {{user.username}}. Welcome to the app.</p>
-<p>This is teacher page.</p>
-<br><br>
-<button><a href="{% url 'teacher.create'%}">Create Question</a></button>
-<br><br><br><br>
-<ul>
+
+
+<p class="teacher-p">Welcome, {{user.username}} </p>
+<table class="teacher-main-table">
+        <tr>
+                <th>Question</th>
+                <th>View Question</th>
+                <th>Update Question</th>
+                <th>Delete Question</th>
+        </tr>
         {% for a in questions %}
-        <li class="question-li">{{a.question}}</li>
-        <button><a href="{% url 'teacher.detail' pk=a.id %}">View Question</a></button>
-        <button><a href="{% url 'teacher.update' pk=a.id %}">Update Question</a></button>
-        <button><a href="{% url 'teacher.delete' pk=a.id %}">Delete Question</a></button>
-        <br><br><br><br>
+        <tr>
+                <td>{{a.question}}</td>
+                <td><a class="teacher-list-button" href="{% url 'teacher.detail' pk=a.id %}">View</a></td>
+                <td><a class="teacher-list-button" href="{% url 'teacher.update' pk=a.id %}">Update</a></td>
+                <td><a class="teacher-list-button" href="{% url 'teacher.delete' pk=a.id %}">Delete</a></td>
+        </tr>
         {% endfor %}
-</ul>
-<button><a href="{% url 'logout'%}">Logout</a></button>
+</table>
+<br><br>
+<a class="teacher-button" href="{% url 'teacher.create'%}">Create Question</a>
+<br><br>
+<a class="teacher-button" href="{% url 'logout'%}">Logout</a>
 
 
 {% endblock %}

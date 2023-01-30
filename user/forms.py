@@ -14,24 +14,17 @@ class StudentSignUpForm(UserCreationForm):
     #remove help text from signup form 
     def __init__(self, *args, **kwargs):
         super(StudentSignUpForm, self).__init__(*args, **kwargs)
+        self.fields['username'].label = ""
+        self.fields['password1'].label = ""
+        self.fields['password2'].label = ""
+        self.fields['username'].widget.attrs.update({'placeholder':('Username')})
+        self.fields['password1'].widget.attrs.update({'placeholder':('Password')})        
+        self.fields['password2'].widget.attrs.update({'placeholder':('Repeat password')})
+        self.fields['name'].widget.attrs.update({'placeholder':('Name')})     
+        self.fields['age'].widget.attrs.update({'placeholder':('Age')})
 
         for fieldname in ['username', 'password1', 'password2']:
             self.fields[fieldname].help_text = None
-
-            self.fields['username'].label = ""
-            self.fields['password1'].label = ""
-            self.fields['password2'].label = ""
-
-
-            self.fields['username'].widget.attrs.update({'placeholder':('Username')})
-            self.fields['password1'].widget.attrs.update({'placeholder':('Password')})        
-            self.fields['password2'].widget.attrs.update({'placeholder':('Repeat password')})
-            self.fields['name'].widget.attrs.update({'placeholder':('Name')})     
-            self.fields['age'].widget.attrs.update({'placeholder':('Age')})
-
-
-
-            
 
     @transaction.atomic
     def save(self):
@@ -58,20 +51,19 @@ class TeacherSignUpForm(UserCreationForm):
 
     def __init__(self, *args, **kwargs):
         super(TeacherSignUpForm, self).__init__(*args, **kwargs)
+        self.fields['username'].label = ""
+        self.fields['password1'].label = ""
+        self.fields['password2'].label = ""
+        self.fields['username'].widget.attrs.update({'placeholder':('Username')})
+        self.fields['password1'].widget.attrs.update({'placeholder':('Password')})        
+        self.fields['password2'].widget.attrs.update({'placeholder':('Repeat password')})
+        self.fields['name'].widget.attrs.update({'placeholder':('Name')})     
+        self.fields['age'].widget.attrs.update({'placeholder':('Age')})   
 
         for fieldname in ['username', 'password1', 'password2']:
             self.fields[fieldname].help_text = None
 
-            self.fields['username'].label = ""
-            self.fields['password1'].label = ""
-            self.fields['password2'].label = ""
 
-
-            self.fields['username'].widget.attrs.update({'placeholder':('Username')})
-            self.fields['password1'].widget.attrs.update({'placeholder':('Password')})        
-            self.fields['password2'].widget.attrs.update({'placeholder':('Repeat password')})
-            self.fields['name'].widget.attrs.update({'placeholder':('Name')})     
-            self.fields['age'].widget.attrs.update({'placeholder':('Age')})     
  
     @transaction.atomic
     def save(self):
