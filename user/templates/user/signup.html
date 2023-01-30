@@ -6,7 +6,7 @@
         {% csrf_token %}
         {{form.as_p}}
         <input type="Submit" name="submit" value="Signup">
-        <br><br><br>
+        <br><br>
         <a class="logout-button" href="{% url 'login' %}">Back</a>
     </form>
 </div>

@@ -46,6 +46,24 @@ body {
     border-radius: 4px;
 }
 
+.form input[type=submit] {
+    display: block;
+    width: 100px;
+    height: 40px;
+    background: #3f0a0a;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    line-height: 5px;
+    text-decoration: none;
+    font-size: small;
+    font-family: 'Open Sans', sans-serif;
+    margin: auto;
+    cursor: pointer;
+}
+
 
 .text p {
     font-size: .8rem;
@@ -152,6 +170,24 @@ body {
     height: 30px;
     border: 2px solid rgba(0, 0, 0, 0.5);
     border-radius: 4px;
+}
+
+.signup-box input[type=submit] {
+    display: block;
+    width: 100px;
+    height: 40px;
+    background: #3f0a0a;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    line-height: 5px;
+    text-decoration: none;
+    font-size: small;
+    font-family: 'Open Sans', sans-serif;
+    margin: auto;
+    cursor: pointer;
 }
 
 
