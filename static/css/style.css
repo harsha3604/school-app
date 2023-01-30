@@ -413,8 +413,44 @@ th {
 
 /* ----------------------------------------------------------- STUDENT PAGE ------------------------------------------------- */
 
+.student {
+    transform: translate(0%, 150%);
+    font-family: 'Open Sans', sans-serif;
+}
 
+.student input[type=submit] {
+    display: block;
+    width: 100px;
+    height: 40px;
+    background: #3f0a0a;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    line-height: 5px;
+    text-decoration: none;
+    font-size: small;
+    font-family: 'Open Sans', sans-serif;
+    margin: auto;
+    cursor: pointer;
+}
 
+.student label {
+    font-family: 'Open Sans', sans-serif;
+    font-size: x-large;
+}
 
+.student select {
+    font-family: 'Open Sans', sans-serif;
+    font-size: x-large;
+}
+
+.student-result {
+    position: absolute;
+    transform: translate(400%, 125%);
+    font-family: 'Open Sans', sans-serif;
+    font-size: x-large;
+}
 
 /* ----------------------------------------------------------- STUDENT PAGE ------------------------------------------------- */

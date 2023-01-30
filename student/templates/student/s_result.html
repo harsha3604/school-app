@@ -1,9 +1,11 @@
 {% extends 'base.html' %}
 {% block content%}
-<p>Correct answers: {{right}}</p>
-<p>Incorrect answers: {{wrong}}</p>
-<p>Total questions: {{total}}</p>
-<p>Score: {{score}}</p>
-<h5>All the best for next quiz!</h5>
-<button><a href="{% url 'student' %}">Go back</a></button>
+<div class="student-result">
+    <p>Correct answers: {{right}}</p>
+    <p>Incorrect answers: {{wrong}}</p>
+    <p>Total questions: {{total}}</p>
+    <p>Score: {{score}}</p>
+    <a class="teacher-button" href="{% url 'student' %}">Try Again?</a>
+</div>
+
 {% endblock %}
