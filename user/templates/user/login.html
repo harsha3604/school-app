@@ -1,26 +1,27 @@
 {% extends 'base.html' %}
 {% block content%}
 <div class="form">
-
-    <div class="text">
-        <h1 class="tapp">TApp</h1>
+    <div class="text_form">
         <h1>Sign in</h1>
-        <p>Create and take quizzes!</p>
     </div>
     <form method="post">
         {% csrf_token%}
         {{form.as_p}}
+        <br>
         <input type="submit" value="Sign in" />
     </form>
     <p class="join-link">
         <a href="{% url 'student_signup' %}" class="join-now">
-            Are You a Student?
+            Are you a Student?
         </a>
     </p>
     <p class="join-link">
         <a href="{% url 'teacher_signup' %}" class="join-now">
-            Are You a Teacher?
+            Are you a Teacher?
         </a>
     </p>
+</div>
+<div class="logo">
+    <h1>Tapp</h1>
 </div>
 {% endblock %}

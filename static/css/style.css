@@ -1,6 +1,17 @@
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+        url('css_fonts/open-sans-v18-latin-regular.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('css_fonts/open-sans-v18-latin-regular.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
 body {
     text-align: center;
-
+    background: linear-gradient(74deg, rgba(2, 0, 36, 1) 0%, rgba(187, 16, 166, 0.7652310924369747) 0%, rgba(0, 212, 255, 1) 89%);
 }
 
 /* ----------------------------------------------------------- LOGIN PAGE -------------------------------------------------- */
@@ -12,22 +23,49 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-120%, -50%);
+    transform: translate(-50%, -50%);
     border-radius: 7px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     padding: 1rem;
+    font-family: 'Open Sans', sans-serif;
 }
+
+.form input[type=text] {
+    width: 200px;
+    height: 30px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+}
+
+.form input[type=password] {
+    width: 200px;
+    height: 30px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+}
+
 
 .text p {
     font-size: .8rem;
     padding-top: 0.3rem;
-    color: #0A66C3;
+    color: #000000;
+    transform: translate(-25%, 2000%);
+    font-family: 'Open Sans', sans-serif;
 }
 
 .text h1 {
-    color: #0A66C3;
+
+    color: #000000;
+    transform: translate(-25%, 1000%);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.text_form h1 {
+    color: #000000;
+    transform: translate(0%, 40%);
+    font-family: 'Open Sans', sans-serif;
 }
 
 .forgot-password-link {
@@ -69,10 +107,17 @@ body {
     color: #0A66C3;
 }
 
+.logo {
+    text-align: right;
+    transform: translate(-15%, 150%);
+    font-family: 'Open Sans', sans-serif;
+}
+
+
 /* ----------------------------------------------------------- LOGIN PAGE -------------------------------------------------- */
 
-
-.signup_box {
+/* ----------------------------------------------------------- SIGNUP PAGE ------------------------------------------------- */
+.signup-box {
     width: 480px;
     height: 480px;
     background: #fff;
@@ -80,10 +125,73 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(25%, -50%);
     border-radius: 7px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     padding: 1rem;
 }
+
+.signup-box input[type=text] {
+    width: 200px;
+    height: 30px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+}
+
+.signup-box input[type=password] {
+    width: 200px;
+    height: 30px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+}
+
+.signup-box input[type=number] {
+    width: 200px;
+    height: 30px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+}
+
+
+
+.signup-text h1 {
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+.signup-text p {
+    transform: translate(-25%, 1500%);
+    font-size: x-large;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* ----------------------------------------------------------- SIGNUP PAGE ------------------------------------------------- */
+
+/* ----------------------------------------------------------- LOGOUT PAGE ------------------------------------------------- */
+
+.logout {
+    transform: translate(-0%, 450%);
+    font-size: x-large;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.logout-button {
+    display: block;
+    width: 100px;
+    height: 20px;
+    background: #3f0a0a;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    line-height: 22px;
+    text-decoration: none;
+    font-size: small;
+    font-family: 'Open Sans', sans-serif;
+    margin: auto;
+}
+
+/* ----------------------------------------------------------- LOGOUT PAGE ------------------------------------------------- */

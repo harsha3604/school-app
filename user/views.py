@@ -58,9 +58,6 @@ def login_view(request):
 
 class LogoutInterfaceView(LoginRequiredMixin,LogoutView):
     template_name='user/logout.html'
-
-class IndexView(TemplateView):
-    template_name='user/index.html'
 ######################################################### SIGNUP,LOGIN,LOGOUT FOR STUDENT AND TEACHERS ############################
 
 

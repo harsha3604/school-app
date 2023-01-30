@@ -5,8 +5,8 @@ from user.models import *
 
 
 class StudentSignUpForm(UserCreationForm):
-    name=forms.CharField(required=True)
-    age=forms.IntegerField(required=True)
+    name=forms.CharField(required=True,label="")
+    age=forms.IntegerField(required=True,label="")
 
     class Meta(UserCreationForm.Meta):
         model = User
@@ -18,6 +18,20 @@ class StudentSignUpForm(UserCreationForm):
         for fieldname in ['username', 'password1', 'password2']:
             self.fields[fieldname].help_text = None
 
+            self.fields['username'].label = ""
+            self.fields['password1'].label = ""
+            self.fields['password2'].label = ""
+
+
+            self.fields['username'].widget.attrs.update({'placeholder':('Username')})
+            self.fields['password1'].widget.attrs.update({'placeholder':('Password')})        
+            self.fields['password2'].widget.attrs.update({'placeholder':('Repeat password')})
+            self.fields['name'].widget.attrs.update({'placeholder':('Name')})     
+            self.fields['age'].widget.attrs.update({'placeholder':('Age')})
+
+
+
+            
 
     @transaction.atomic
     def save(self):
@@ -35,9 +49,9 @@ class StudentSignUpForm(UserCreationForm):
 
         
 class TeacherSignUpForm(UserCreationForm):
-    name=forms.CharField(required=True)
-    age=forms.IntegerField(required=True)
-    t_subject = forms.CharField(label = 'Select Subject:', widget = forms.Select(choices=SUBJECT_CHOICES))
+    name=forms.CharField(required=True,label="")
+    age=forms.IntegerField(required=True,label="")
+    t_subject = forms.CharField(required=True,label = "", widget = forms.Select(choices=SUBJECT_CHOICES))
 
     class Meta(UserCreationForm.Meta):
         model = User
@@ -47,6 +61,17 @@ class TeacherSignUpForm(UserCreationForm):
 
         for fieldname in ['username', 'password1', 'password2']:
             self.fields[fieldname].help_text = None
+
+            self.fields['username'].label = ""
+            self.fields['password1'].label = ""
+            self.fields['password2'].label = ""
+
+
+            self.fields['username'].widget.attrs.update({'placeholder':('Username')})
+            self.fields['password1'].widget.attrs.update({'placeholder':('Password')})        
+            self.fields['password2'].widget.attrs.update({'placeholder':('Repeat password')})
+            self.fields['name'].widget.attrs.update({'placeholder':('Name')})     
+            self.fields['age'].widget.attrs.update({'placeholder':('Age')})     
  
     @transaction.atomic
     def save(self):
@@ -67,16 +92,20 @@ class LoginForm(forms.Form):
     username = forms.CharField(
         widget= forms.TextInput(
             attrs={
-                "class": "form-control"
+                "class": "form-control",
+                "placeholder":"Username",
             }
-        )
+        ),
+        label=""
     )
     password = forms.CharField(
         widget=forms.PasswordInput(
             attrs={
-                "class": "form-control"
+                "class": "form-control",
+                "placeholder":"Password",
             }
-        )
+        ),
+        label=""
     )
 
 

@@ -1,12 +1,18 @@
 {% extends 'base.html' %}
 {% block content%}
-<div class="signup_box">
+<div class="signup-box">
+    <h1>Registration Form</h1>
     <form method="POST">
         {% csrf_token %}
         {{form.as_p}}
         <input type="Submit" name="submit" value="Signup">
-        <br><br>
-        <button><a href="{% url 'login' %}">Back</a></button>
+        <br><br><br>
+        <a class="logout-button" href="{% url 'login' %}">Back</a>
     </form>
+</div>
+
+<div class="signup-text">
+    <p>Create questions.</p>
+    <p>Take quizzes.</p>
 </div>
 {% endblock%}
