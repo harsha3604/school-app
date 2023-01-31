@@ -6,7 +6,7 @@
   - cd "Your new folder path"
     - python3 manage.py runserver
 
-Suggestions are welcome.
+
 
 
 ## Update 1.1
@@ -14,3 +14,5 @@ Suggestions are welcome.
 * Teacher assigned to a subject can perform CRUD operations on questions related to that subject only.
   - For example: A science teacher can only view questions related to science subject.
  
+
+Suggestions are welcome.

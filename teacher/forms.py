@@ -9,7 +9,6 @@ class QuestionForm(forms.ModelForm):
         super(QuestionForm, self).__init__(*args, **kwargs)
         self.fields['question'].widget.attrs.update({'placeholder':('Question')})
         self.fields['answer'].widget.attrs.update({'placeholder':('Answer')}) 
-
         self.fields['question'].label=""
         self.fields['answer'].label=""
 

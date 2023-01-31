@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block content%}
+{% block content %}
 <form class="teacher-update" action="{% url 'teacher.update' pk=question.id %}" method="post">
     {% csrf_token %}
     {{form.as_p}}
