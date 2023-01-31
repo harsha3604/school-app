@@ -3,26 +3,29 @@
 
 
 <p class="teacher-p">Welcome, {{user.username}} </p>
-<table class="teacher-main-table">
-        <tr>
-                <th>Question</th>
-                <th>View Question</th>
-                <th>Update Question</th>
-                <th>Delete Question</th>
-        </tr>
-        {% for a in questions %}
-        <tr>
-                <td>{{a.question}}</td>
-                <td><a class="teacher-list-button" href="{% url 'teacher.detail' pk=a.id %}">View</a></td>
-                <td><a class="teacher-list-button" href="{% url 'teacher.update' pk=a.id %}">Update</a></td>
-                <td><a class="teacher-list-button" href="{% url 'teacher.delete' pk=a.id %}">Delete</a></td>
-        </tr>
-        {% endfor %}
-</table>
-<br><br>
-<a class="teacher-button" href="{% url 'teacher.create'%}">Create Question</a>
-<br><br>
-<a class="teacher-button" href="{% url 'logout'%}">Logout</a>
+<div>
+        <table class="teacher-main-table">
+                <tr>
+                        <th>Question</th>
+                        <th>View Question</th>
+                        <th>Update Question</th>
+                        <th>Delete Question</th>
+                </tr>
+                {% for a in questions %}
+                <tr>
+                        <td>{{a.question}}</td>
+                        <td><a class="teacher-list-button" href="{% url 'teacher.detail' pk=a.id %}">View</a></td>
+                        <td><a class="teacher-list-button" href="{% url 'teacher.update' pk=a.id %}">Update</a></td>
+                        <td><a class="teacher-list-button" href="{% url 'teacher.delete' pk=a.id %}">Delete</a></td>
+                </tr>
+                {% endfor %}
+        </table>
+        <br><br>
+        <a class="teacher-button" href="{% url 'teacher.create'%}">Create Question</a>
+        <br><br>
+        <a class="teacher-button" href="{% url 'logout'%}">Logout</a>
+</div>
+
 
 
 {% endblock %}

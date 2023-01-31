@@ -20,7 +20,7 @@ class StudentSignUpView(CreateView):
     def form_valid(self, form):
         user = form.save()
         login(self.request, user)
-        return redirect('index')
+        return redirect('login')
 
 class TeacherSignUpView(CreateView):
     model = User
@@ -34,7 +34,7 @@ class TeacherSignUpView(CreateView):
     def form_valid(self, form):
         user = form.save()
         login(self.request, user)
-        return redirect('index')
+        return redirect('login')
 
 def login_view(request):
     form = LoginForm(request.POST or None)

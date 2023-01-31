@@ -1,16 +1,16 @@
 {% extends 'base.html' %}
 {% block content%}
-<div class="teacher-create">
-    <form method="POST" enctype="multipart/form-data">
+<form class="teacher-create" method="POST" enctype="multipart/form-data">
 
-        <!-- Security token -->
-        {% csrf_token %}
+    <!-- Security token -->
+    {% csrf_token %}
 
-        <!-- Using the formset -->
-        {{ form.as_p }}
+    <!-- Using the formset -->
+    {{ form.as_p }}
 
-        <input type="submit" value="Submit">
-    </form>
+    <input type="submit" value="Submit">
+    <br><br>
     <a class="teacher-button" href="{% url 'teacher' %}">Back</a>
-</div>
+</form>
+
 {% endblock %}
