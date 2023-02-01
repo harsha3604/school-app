@@ -14,5 +14,7 @@
 * Teacher assigned to a subject can perform CRUD operations on questions related to that subject only.
   - For example: A science teacher can only view questions related to science subject.
  
+## Update 1.2
+* Added css to the app. 
 
 Suggestions are welcome.
