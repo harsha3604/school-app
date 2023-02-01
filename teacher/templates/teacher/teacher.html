@@ -14,16 +14,16 @@
                 {% for a in questions %}
                 <tr>
                         <td>{{a.question}}</td>
-                        <td><a class="teacher-list-button" href="{% url 'teacher.detail' pk=a.id %}">View</a></td>
-                        <td><a class="teacher-list-button" href="{% url 'teacher.update' pk=a.id %}">Update</a></td>
-                        <td><a class="teacher-list-button" href="{% url 'teacher.delete' pk=a.id %}">Delete</a></td>
+                        <td><a class="view-button" href="{% url 'teacher.detail' pk=a.id %}">View</a></td>
+                        <td><a class="update-button" href="{% url 'teacher.update' pk=a.id %}">Update</a></td>
+                        <td><a class="delete-button" href="{% url 'teacher.delete' pk=a.id %}">Delete</a></td>
                 </tr>
                 {% endfor %}
         </table>
         <br><br>
-        <a class="teacher-button" href="{% url 'teacher.create'%}">Create Question</a>
+        <a class="create-button" href="{% url 'teacher.create'%}">Create Question</a>
         <br><br>
-        <a class="teacher-button" href="{% url 'logout'%}">Logout</a>
+        <a class="logout-button" href="{% url 'logout'%}">Logout</a>
 </div>
 
 

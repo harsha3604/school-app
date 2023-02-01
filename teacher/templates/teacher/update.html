@@ -4,6 +4,8 @@
     {% csrf_token %}
     {{form.as_p}}
     <input type="submit" value="Submit" />
+    <br><br>
+    <a class="back-button" href="{% url 'teacher' %}">Back</a>
 </form>
-<a class="teacher-button-update" href="{% url 'teacher' %}">Back</a>
+
 {% endblock %}

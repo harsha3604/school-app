@@ -46,11 +46,12 @@ body {
     border-radius: 4px;
 }
 
+/* login button*/
 .form input[type=submit] {
     display: block;
     width: 100px;
     height: 40px;
-    background: #3f0a0a;
+    background: #c91b1b;
     padding: 10px;
     text-align: center;
     border-radius: 5px;
@@ -178,7 +179,7 @@ body {
     display: block;
     width: 100px;
     height: 40px;
-    background: #3f0a0a;
+    background: #c91b1b;
     padding: 10px;
     text-align: center;
     border-radius: 5px;
@@ -206,21 +207,9 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-/* ----------------------------------------------------------- SIGNUP PAGE ------------------------------------------------- */
-
-
-
-/* ----------------------------------------------------------- LOGOUT PAGE ------------------------------------------------- */
-
-.logout {
-    transform: translate(-0%, 450%);
-    font-size: x-large;
-    font-family: 'Open Sans', sans-serif;
-}
-
-.logout-button {
+.back-button {
     display: block;
-    width: 100px;
+    width: 120px;
     height: 20px;
     background: #3f0a0a;
     padding: 10px;
@@ -233,6 +222,18 @@ body {
     font-size: small;
     font-family: 'Open Sans', sans-serif;
     margin: auto;
+}
+
+/* ----------------------------------------------------------- SIGNUP PAGE ------------------------------------------------- */
+
+
+
+/* ----------------------------------------------------------- LOGOUT PAGE ------------------------------------------------- */
+
+.logout {
+    transform: translate(-0%, 450%);
+    font-size: x-large;
+    font-family: 'Open Sans', sans-serif;
 }
 
 /* ----------------------------------------------------------- LOGOUT PAGE ------------------------------------------------- */
@@ -275,11 +276,12 @@ th {
     font-family: 'Open Sans', sans-serif;
 }
 
-.teacher-button {
+.create-button {
+    position: relative;
     display: block;
     width: 150px;
     height: 20px;
-    background: #3f0a0a;
+    background: #175312;
     padding: 10px;
     text-align: center;
     border-radius: 5px;
@@ -292,12 +294,11 @@ th {
     margin: auto;
 }
 
-
-.teacher-list-button {
+.logout-button {
     display: block;
-    width: 100px;
+    width: 150px;
     height: 20px;
-    background: #3f0a0a;
+    background: #ff0000;
     padding: 10px;
     text-align: center;
     border-radius: 5px;
@@ -310,12 +311,11 @@ th {
     margin: auto;
 }
 
-.teacher-logout-button {
-    position: relative;
+.view-button {
     display: block;
-    width: 100px;
+    width: 150px;
     height: 20px;
-    background: #3f0a0a;
+    background: #1922a0;
     padding: 10px;
     text-align: center;
     border-radius: 5px;
@@ -327,6 +327,43 @@ th {
     font-family: 'Open Sans', sans-serif;
     margin: auto;
 }
+
+
+.update-button {
+    display: block;
+    width: 150px;
+    height: 20px;
+    background: rgb(255, 165, 0);
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    line-height: 22px;
+    text-decoration: none;
+    font-size: small;
+    font-family: 'Open Sans', sans-serif;
+    margin: auto;
+}
+
+
+.delete-button {
+    display: block;
+    width: 150px;
+    height: 20px;
+    background: #d41212;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    line-height: 22px;
+    text-decoration: none;
+    font-size: small;
+    font-family: 'Open Sans', sans-serif;
+    margin: auto;
+}
+
 
 /*-----------------------------------------------------TEACHER DETAIL*/
 .teacher-detail-table {
@@ -369,33 +406,13 @@ td {
     display: block;
     width: 100px;
     height: 40px;
-    background: #3f0a0a;
+    background: #d41212;
     padding: 10px;
     text-align: center;
     border-radius: 5px;
     color: white;
     font-weight: bold;
     line-height: 5px;
-    text-decoration: none;
-    font-size: small;
-    font-family: 'Open Sans', sans-serif;
-    margin: auto;
-    cursor: pointer;
-}
-
-
-.teacher-button-update {
-    transform: translate(0%, 500%);
-    display: block;
-    width: 100px;
-    height: 20px;
-    background: #3f0a0a;
-    padding: 10px;
-    text-align: center;
-    border-radius: 5px;
-    color: white;
-    font-weight: bold;
-    line-height: 20px;
     text-decoration: none;
     font-size: small;
     font-family: 'Open Sans', sans-serif;
@@ -460,7 +477,7 @@ td {
     display: block;
     width: 100px;
     height: 40px;
-    background: #3f0a0a;
+    background: #d41212;
     padding: 10px;
     text-align: center;
     border-radius: 5px;
@@ -478,8 +495,9 @@ td {
 
 
 
-/* ----------------------------------------------------------- STUDENT PAGE ------------------------------------------------- */
+/* ----------------------------------------------------------- STUDENT PAGE ------------------------------------------------------------------------ */
 
+/*---------------------------------------------STUDENT HOME*/
 .student {
     transform: translate(0%, 150%);
     font-family: 'Open Sans', sans-serif;
@@ -489,7 +507,7 @@ td {
     display: block;
     width: 100px;
     height: 40px;
-    background: #3f0a0a;
+    background: #175312;
     padding: 10px;
     text-align: center;
     border-radius: 5px;
@@ -520,6 +538,7 @@ td {
     font-size: x-large;
 }
 
+/*------------------------------------------------STUDENT QUIZ*/
 .student-table {
     position: absolute;
     z-index: 2;
@@ -551,7 +570,7 @@ th {
     display: block;
     width: 100px;
     height: 40px;
-    background: #3f0a0a;
+    background: #175312;
     padding: 10px;
     text-align: center;
     border-radius: 5px;
